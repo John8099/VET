@@ -1,0 +1,48 @@
+.form-control {
+    color: black !important;
+}
+
+input, select {
+    border: 1px solid #6c757d !important;
+}
+
+select {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: #fff !important;
+}
+
+input:focus {
+    border: 1px solid #6c757d !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.btn.btn-primary:hover {
+    background-color: #007bfff0 !important;
+}
+
+.dataTables_filter, .pagination {
+    float: right !important;
+}
+
+.dataTables_filter input {
+    width: 250px !important;
+}
+
+.dataTables_empty {
+    text-align: center !important;
+}
+
+#admin_table_length, #product_table_length {
+    margin-top: 20px !important;
+}
+
+.custom-select {
+    width: 70px !important;
+    height: 30px !important;
+}
