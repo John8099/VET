@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: -moz-linear-gradient(top, #7579ff, #b224ef);">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background:#7579ff"> 
+<!-- -moz-linear-gradient(top, , #b224ef); -->
     <a class="navbar-brand" href="#">
         <img src="../images/icons/footprint.png" style="width: 50px;">
     </a>
@@ -6,7 +7,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 40px !important;">
         <ul class="navbar-nav mr-auto">
             <?php
             $splitedLink = explode("/", $_SERVER['REQUEST_URI']);
@@ -23,8 +24,8 @@
                 <?php
                 if ($title == "Catalog") {
                 ?>
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="../pages/<?php echo "$link?page=all" ?>" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item active dropdown"  >
+                        <a class="nav-link dropdown-toggle text-dark" href="../pages/<?php echo "$link?page=all" ?>" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <?php echo $title ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -55,11 +56,11 @@
                 } else if ($link == $currLink) {
                 ?>
                     <li class="nav-item active">
-                        <a class="nav-link" href="../pages/<?php echo $link ?>"> <?php echo $title ?><span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-dark" href="../pages/<?php echo $link ?>"> <?php echo $title ?><span class="sr-only">(current)</span></a>
                     </li>
                 <?php } else { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/<?php echo $link ?>"> <?php echo $title ?></a>
+                        <a class="nav-link text-dark" href="../pages/<?php echo $link ?>"> <?php echo $title ?></a>
                     </li>
             <?php
                 }
@@ -69,7 +70,7 @@
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-danger my-2 my-sm-0" type="button" onclick="return window.location.href = '../php/logout.php'">Logout</button>
+            <button class="btn btn-danger my-2 my-sm-0 " type="button" onclick="return window.location.href = '../php/logout.php'">Logout</button>
         </form>
     </div>
 </nav>
